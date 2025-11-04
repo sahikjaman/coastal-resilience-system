@@ -1,0 +1,21 @@
+{
+  "title": "Plastic Waste Data",
+  "hotspots": [
+    {
+      "id": 1,
+      "name": "Laut Jaya, Jakarta",
+      "concentration": 18.5,
+      "unit": "kg/km²",
+      "sources": ["tourism", "urban runoff", "river"],
+      "priority": "very_high"
+    },
+    {
+      "id": 2,
+      "name": "Semarang Harbor",
+      "concentration": 12.3,
+      "unit": "kg/km²",
+      "sources": ["port_activity", "fisher_community"],
+      "priority": "high"
+    }
+  ]
+}

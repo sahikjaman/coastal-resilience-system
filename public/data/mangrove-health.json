@@ -1,0 +1,23 @@
+{
+  "title": "Mangrove Health Data",
+  "areas": [
+    {
+      "id": 1,
+      "name": "Ujung Kulon",
+      "healthStatus": "healthy",
+      "area": 8500,
+      "ndvi": 0.85,
+      "vulnerabilityIndex": 0.2,
+      "priority": "low"
+    },
+    {
+      "id": 2,
+      "name": "Segara Anakan",
+      "healthStatus": "degraded",
+      "area": 6200,
+      "ndvi": 0.45,
+      "vulnerabilityIndex": 0.78,
+      "priority": "very_high"
+    }
+  ]
+}
