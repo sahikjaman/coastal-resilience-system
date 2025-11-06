@@ -23,5 +23,8 @@ function App() {
     </BrowserRouter>
   );
 }
+import MasterMap from "./pages/MasterMap";
+
+<Route path="/master-map" element={<MasterMap />} />;
 
 export default App;

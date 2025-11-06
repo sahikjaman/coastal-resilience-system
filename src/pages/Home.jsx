@@ -67,3 +67,7 @@ export default function Home() {
     </div>
   );
 }
+// Di Home.jsx, tambahkan link ke master map
+<Link to="/master-map" className="btn-primary">
+  🗺️ Lihat Peta Terpadu
+</Link>;
