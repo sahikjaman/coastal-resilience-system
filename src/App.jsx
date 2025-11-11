@@ -6,6 +6,7 @@ import SeaLevelRise from "./pages/SeaLevelRise";
 import ShorelineChange from "./pages/ShorelineChange";
 import PlasticWaste from "./pages/PlasticWaste";
 import MangroveHealth from "./pages/MangroveHealth";
+import MasterMap from "./pages/MasterMap";
 import "./styles/global.css";
 
 function App() {
@@ -18,13 +19,11 @@ function App() {
         <Route path="/shoreline-change" element={<ShorelineChange />} />
         <Route path="/plastic-waste" element={<PlasticWaste />} />
         <Route path="/mangrove-health" element={<MangroveHealth />} />
+        <Route path="/master-map" element={<MasterMap />} />
       </Routes>
       <Footer />
     </BrowserRouter>
   );
 }
-import MasterMap from "./pages/MasterMap";
-
-<Route path="/master-map" element={<MasterMap />} />;
 
 export default App;

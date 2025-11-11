@@ -2,6 +2,7 @@ import MapViewer from "../components/MapViewer";
 import Dashboard from "../components/Dashboard";
 import DataAnalysis from "../components/DataAnalysis";
 import Methodology from "../components/Methodology";
+import { Waves, MapPin } from "lucide-react";
 
 export default function SeaLevelRise() {
   const slrData = {
@@ -76,22 +77,39 @@ export default function SeaLevelRise() {
   ];
 
   return (
-    <div className="pb-16">
-      <div className="bg-gradient-to-r from-blue-600 to-teal-600 text-white py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">
-            🌊 Pemetaan Kenaikan Muka Air Laut (SLR)
-          </h1>
-          <p className="text-lg">
+    <div className="pb-16 bg-gradient-to-b from-gray-50 to-white">
+      {/* Hero Header */}
+      <div className="bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-600 text-white py-16 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center">
+              <Waves className="w-8 h-8 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold">
+              Pemetaan Kenaikan Muka Air Laut (SLR)
+            </h1>
+          </div>
+          <p className="text-xl text-blue-100 max-w-3xl">
             Simulasi kenaikan muka air laut dan ancaman banjir rob di Jawa dan
-            Bali hingga 2100
+            Bali hingga 2100 menggunakan teknologi DEM dan analisis geospasial
           </p>
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🗺️ Visualisasi Interaktif</h2>
+      <div className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        {/* Map Section */}
+        <div className="animate-fade-in-up">
+          <div className="flex items-center gap-3 mb-6">
+            <MapPin className="w-6 h-6 text-blue-600" />
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+              Visualisasi Interaktif
+            </h2>
+          </div>
           <MapViewer
             center={[-6.2088, 106.8456]}
             zoom={8}
@@ -118,13 +136,20 @@ export default function SeaLevelRise() {
           />
         </div>
 
-        <Dashboard data={slrData} title="Statistik Kenaikan Muka Air Laut" />
+        {/* Dashboard */}
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <Dashboard data={slrData} title="Statistik Kenaikan Muka Air Laut" />
+        </div>
 
-        <div className="my-12">
+        {/* Analysis */}
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <DataAnalysis data={analysisData} />
         </div>
 
-        <Methodology title="Metodologi Pemetaan SLR" methods={methods} />
+        {/* Methodology */}
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <Methodology title="Metodologi Pemetaan SLR" methods={methods} />
+        </div>
       </div>
     </div>
   );
