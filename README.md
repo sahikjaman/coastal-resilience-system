@@ -38,23 +38,6 @@ npm run dev
 npm run build
 ```
 
-## 📁 Project Structure
-
-```
-coastal-resilience-system/
-├── public/
-│   ├── data/           # JSON datasets
-│   └── index.html
-├── src/
-│   ├── components/     # React components
-│   ├── pages/          # Page components
-│   ├── utils/          # Helper functions
-│   ├── App.jsx
-│   └── main.jsx
-├── package.json
-└── vite.config.js
-```
-
 ## 🌍 Data Sources
 
 - **Sentinel-2 MSI** (ESA) - 10-20m resolution
@@ -64,30 +47,6 @@ coastal-resilience-system/
 
 ## 📖 Citation
 
-If you use this platform, please cite:
 
-```bibtex
-@software{coastguard2025,
-  title={CoastGuard Indonesia: Coastal Resilience Monitoring System},
-  author={Your Team Name},
-  year={2025},
-  url={https://github.com/yourusername/coastal-resilience}
-}
-```
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) file
-
-## 👥 Team
-
-- Your Name - Project Lead
-- Team Member 2 - Data Scientist
-- Team Member 3 - Marine Ecologist
-- Team Member 4 - Web Developer
-
-## 🏆 ASEAN Coastal Resilience Challenge 2025
-
----
 
 Made with ❤️ for coastal protection
